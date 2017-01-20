@@ -170,6 +170,9 @@ class ResourceGenerator
 
     $parts[] = substr($fileHash, 0, 7);
 
+
+    $file = implode("/", array_map("rawurlencode", explode("/", $file)));
+
     //Include the file extension
     $parts[] = $file;
 
